@@ -1,0 +1,97 @@
+:root {
+    --primarycolor: #606c38;
+    --light-primary: #fefae0;
+    --lightest-color: #dda15e;
+    --secondary-color: #283618;
+    --light-secondary: #bc6c25;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--primarycolor);
+    color: var(--lightest-color);
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+header>h2>i {
+    margin-right: 0.5rem;
+}
+
+.movie-name-wrapper {
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+
+.movie-year-wrapper {
+    /* width = 30%; */
+    display: flex;
+    align-items: center;
+}
+
+#search-buttom {
+    width: 5%;
+}
+
+.movie-year-wrapper>input {
+    max-width: 5rem;
+}
+
+.movie-name-wrapper>input {
+    width: 100%;
+}
+
+.movie-name-wrapper>input,
+.movie-year-wrapper>input {
+    margin: 0 0.5rem;
+    border-radius: 7px;
+    padding: 0.3rem 0.2rem;
+    font-weight: bold;
+}
+
+.movie-name-wrapper>label,
+.movie-year-wrapper>label {
+    font-weight: bold;
+}
+
+#search-buton {
+    all: unset;
+    padding: 0.3rem;
+    border: 2px solid var(--light-primary);
+    border-radius: 10px;
+}
+
+#search-buton:focus,
+#search-buton:hover {
+    background-color: white;
+}
+
+main {
+    text-align: center;
+    margin: 2rem 0;
+    background-color: var(--light-primary);
+    color: var(--pr--light-primary);
+    flex: 1;
+}
