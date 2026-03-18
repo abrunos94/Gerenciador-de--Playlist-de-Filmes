@@ -1,9 +1,9 @@
 :root {
-    --primarycolor: #606c38;
-    --light-primary: #fefae0;
-    --lightest-color: #dda15e;
-    --secondary-color: #283618;
-    --light-secondary: #bc6c25;
+    --primary-color: #29335c;
+    --light-primary: #3f4f8d;
+    --ligthest--color: #e9ebd5;
+    --secondary-color: #774936;
+    --light-secondary: #b97e64;
 }
 
 * {
@@ -19,13 +19,18 @@ body {
     min-height: 100dvh;
 }
 
+button {
+    all: unset;
+    cursor: pointer;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background-color: var(--primarycolor);
-    color: var(--lightest-color);
+    background-color: var(--primary-color);
+    color: var(--ligthest--color);
 }
 
 #search-container {
@@ -46,13 +51,9 @@ header>h2>i {
 }
 
 .movie-year-wrapper {
-    /* width = 30%; */
+    /* width: 30%; */
     display: flex;
     align-items: center;
-}
-
-#search-buttom {
-    width: 5%;
 }
 
 .movie-year-wrapper>input {
@@ -76,22 +77,57 @@ header>h2>i {
     font-weight: bold;
 }
 
-#search-buton {
-    all: unset;
+#search-button {
+    width: 20px;
     padding: 0.3rem;
-    border: 2px solid var(--light-primary);
+    border: 2px solid var(--ligthest--color);
     border-radius: 10px;
 }
 
-#search-buton:focus,
-#search-buton:hover {
-    background-color: white;
+#search-button:focus,
+#search-button:hover {
+    background-color: var(--light-primary);
 }
 
 main {
     text-align: center;
-    margin: 2rem 0;
-    background-color: var(--light-primary);
-    color: var(--pr--light-primary);
-    flex: 1;
+    padding: 2rem 0;
+    background-color: var(--ligthest--color);
+    color: var(--light-primary);
+    flex-grow: 1;
+}
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+#movie-list article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#movie-list article>img {
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.remove-button {
+    border: 3px solid var(--secondary-color);
+    padding: 0.3rem 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 1px 1px 10px #000;
+    color: var(--secondary-color);
+}
+
+.remove-button:focus,
+.remove-button:hover {
+    background-color: var(--light-secondary);
+    color: var(--ligthest-color);
 }
